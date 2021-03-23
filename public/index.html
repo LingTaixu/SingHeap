@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- <link rel="icon" href="<%= BASE_URL %>icon.ico"> -->
+  <title>
+    <%= VUE_APP_TITLE %>
+  </title>
+  <style>
+    html,
+    body,
+    #app {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .app-loading-group {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+      background-blend-mode: multiply, multiply;
+    }
+
+    .app-loading-title {
+      color: #FFF;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      letter-spacing: 0.2em;
+    }
+
+    .app-loading-sub-title {
+      color: #FFF;
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+
+    .app-loading-sub-info {
+      color: #FFF;
+      font-size: 10px;
+      opacity: .8;
+      margin-bottom: 4px;
+    }
+
+    .app-loading-btn {
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid #dcdfe6;
+      border-color: #dcdfe6;
+      color: #606266;
+      -webkit-appearance: none;
+      text-align: center;
+      box-sizing: border-box;
+      outline: none;
+      margin: 0;
+      transition: .1s;
+      font-weight: 500;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      padding: 12px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+      padding: 7px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .app-loading-grid {
+      width: 30px;
+      height: 30px;
+    }
+
+    .app-loading-grid .app-loading {
+      width: 10px;
+      height: 10px;
+      background-color: #FFF;
+      float: left;
+      -webkit-animation: app-loading-grid-scale-delay 1.3s infinite ease-in-out;
+      animation: app-loading-grid-scale-delay 1.3s infinite ease-in-out;
+    }
+
+    .app-loading-grid .app-loading1 {
+      border-top-left-radius: 4px;
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+
+    .app-loading-grid .app-loading2 {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+
+    .app-loading-grid .app-loading3 {
+      border-top-right-radius: 4px;
+      -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+
+    .app-loading-grid .app-loading4 {
+      -webkit-animation-delay: 0.1s;
+      animation-delay: 0.1s;
+    }
+
+    .app-loading-grid .app-loading5 {
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+
+    .app-loading-grid .app-loading6 {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+
+    .app-loading-grid .app-loading7 {
+      border-bottom-left-radius: 4px;
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s;
+    }
+
+    .app-loading-grid .app-loading8 {
+      -webkit-animation-delay: 0.1s;
+      animation-delay: 0.1s;
+    }
+
+    .app-loading-grid .app-loading9 {
+      border-bottom-right-radius: 4px;
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+
+    @-webkit-keyframes app-loading-grid-scale-delay {
+
+      0%,
+      70%,
+      100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+      }
+
+      35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+      }
+    }
+
+    @keyframes app-loading-grid-scale-delay {
+
+      0%,
+      70%,
+      100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+      }
+
+      35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>太虚</strong>
+  </noscript>
+  <div id="app">
+    <div class="app-loading-group">
+      <div class="app-loading-grid">
+        <div class="app-loading app-loading1"></div>
+        <div class="app-loading app-loading2"></div>
+        <div class="app-loading app-loading3"></div>
+        <div class="app-loading app-loading4"></div>
+        <div class="app-loading app-loading5"></div>
+        <div class="app-loading app-loading6"></div>
+        <div class="app-loading app-loading7"></div>
+        <div class="app-loading app-loading8"></div>
+        <div class="app-loading app-loading9"></div>
+      </div>
+      <div class="app-loading-title">加载中</div>
+      <div class="app-loading-sub-info">如果很久很久都没有加载成功，请清空缓存重新加载页面</div>
+      <div style="margin-top: 10px;">
+      </div>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
